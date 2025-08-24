@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="APIsuite">
+  <listeners>
+    <listener class-name="com.restapi.reporting.ExtentReportTestNGAttacher" />
+  </listeners>
+
+  <test name="API Tests">
+    <classes>
+      <class name="com.restapi.test.HealthTest" />
+      <class name="com.restapi.test.AccountsTest" />
+      <class name="com.restapi.test.BookTest" />
+      <class name="com.restapi.test.NegativeBookTest" />
+    </classes>
+  </test>
+</suite>

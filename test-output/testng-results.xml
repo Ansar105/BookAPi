@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-24T17:17:45 IST" name="APIsuite" finished-at="2025-08-24T17:17:49 IST" duration-ms="3670">
+    <groups>
+      <group name="healthCheck">
+        <method signature="HealthTest.healthCheck()[pri:1, instance:com.restapi.test.HealthTest@821330f]" name="healthCheck" class="com.restapi.test.HealthTest"/>
+      </group> <!-- healthCheck -->
+    </groups>
+    <test started-at="2025-08-24T17:17:45 IST" name="API Tests" finished-at="2025-08-24T17:17:49 IST" duration-ms="3670">
+      <class name="com.restapi.test.AccountsTest">
+        <test-method is-config="true" signature="setupData()[pri:0, instance:com.restapi.test.AccountsTest@4f0f2942]" started-at="2025-08-24T17:17:47 IST" name="setupData" finished-at="2025-08-24T17:17:47 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupData -->
+        <test-method signature="signUpUser()[pri:1, instance:com.restapi.test.AccountsTest@4f0f2942]" started-at="2025-08-24T17:17:47 IST" name="signUpUser" description="Sign up a new user" depends-on-groups="healthCheck" finished-at="2025-08-24T17:17:47 IST" duration-ms="489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpUser -->
+        <test-method signature="verifySignUpUserAndGenerateToken()[pri:2, instance:com.restapi.test.AccountsTest@4f0f2942]" started-at="2025-08-24T17:17:47 IST" name="verifySignUpUserAndGenerateToken" description="Verify user sign up and generate token" finished-at="2025-08-24T17:17:48 IST" depends-on-methods="com.restapi.test.AccountsTest.signUpUser" duration-ms="325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpUserAndGenerateToken -->
+        <test-method signature="signUpwithExistingEmail()[pri:3, instance:com.restapi.test.AccountsTest@4f0f2942]" started-at="2025-08-24T17:17:48 IST" name="signUpwithExistingEmail" description="Sign up with existing email" finished-at="2025-08-24T17:17:48 IST" depends-on-methods="com.restapi.test.AccountsTest.signUpUser" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpwithExistingEmail -->
+        <test-method signature="loginWithIncorrectPassword()[pri:4, instance:com.restapi.test.AccountsTest@4f0f2942]" started-at="2025-08-24T17:17:48 IST" name="loginWithIncorrectPassword" description="Login with incorrect password" finished-at="2025-08-24T17:17:49 IST" depends-on-methods="com.restapi.test.AccountsTest.signUpUser" duration-ms="413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithIncorrectPassword -->
+        <test-method signature="loginWithIncorrectEmail()[pri:5, instance:com.restapi.test.AccountsTest@4f0f2942]" started-at="2025-08-24T17:17:49 IST" name="loginWithIncorrectEmail" description="Login with incorrect email" finished-at="2025-08-24T17:17:49 IST" depends-on-methods="com.restapi.test.AccountsTest.signUpUser" duration-ms="49" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithIncorrectEmail -->
+      </class> <!-- com.restapi.test.AccountsTest -->
+      <class name="com.restapi.test.HealthTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.restapi.test.HealthTest@821330f]" started-at="2025-08-24T17:17:45 IST" name="setUp" finished-at="2025-08-24T17:17:45 IST" duration-ms="513" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setupData()[pri:0, instance:com.restapi.test.HealthTest@821330f]" started-at="2025-08-24T17:17:45 IST" name="setupData" finished-at="2025-08-24T17:17:45 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupData -->
+        <test-method signature="healthCheck()[pri:1, instance:com.restapi.test.HealthTest@821330f]" started-at="2025-08-24T17:17:45 IST" name="healthCheck" description="Health check to check if server is up" finished-at="2025-08-24T17:17:47 IST" duration-ms="1714" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- healthCheck -->
+      </class> <!-- com.restapi.test.HealthTest -->
+      <class name="com.restapi.test.NegativeBookTest">
+        <test-method is-config="true" signature="setupData()[pri:0, instance:com.restapi.test.NegativeBookTest@6933b6c6]" started-at="2025-08-24T17:17:48 IST" name="setupData" finished-at="2025-08-24T17:17:48 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupData -->
+        <test-method signature="addBookWithInvalidTokenTest()[pri:0, instance:com.restapi.test.NegativeBookTest@6933b6c6]" started-at="2025-08-24T17:17:48 IST" name="addBookWithInvalidTokenTest" description="Add a book with invalid token" finished-at="2025-08-24T17:17:48 IST" depends-on-methods="com.restapi.test.AccountsTest.signUpUser, com.restapi.test.AccountsTest.verifySignUpUserAndGenerateToken" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBookWithInvalidTokenTest -->
+        <test-method signature="deleteBookWithInvalidTokenTest()[pri:0, instance:com.restapi.test.NegativeBookTest@6933b6c6]" started-at="2025-08-24T17:17:48 IST" name="deleteBookWithInvalidTokenTest" description="Delete book with invalid token" finished-at="2025-08-24T17:17:48 IST" depends-on-methods="com.restapi.test.AccountsTest.signUpUser, com.restapi.test.AccountsTest.verifySignUpUserAndGenerateToken" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBookWithInvalidTokenTest -->
+        <test-method signature="updateBookWithInvalidTokenTest()[pri:0, instance:com.restapi.test.NegativeBookTest@6933b6c6]" started-at="2025-08-24T17:17:48 IST" name="updateBookWithInvalidTokenTest" description="Update book with invalid token" finished-at="2025-08-24T17:17:48 IST" depends-on-methods="com.restapi.test.AccountsTest.signUpUser, com.restapi.test.AccountsTest.verifySignUpUserAndGenerateToken" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateBookWithInvalidTokenTest -->
+        <test-method signature="getAllBookWithInvalidTokenTest()[pri:0, instance:com.restapi.test.NegativeBookTest@6933b6c6]" started-at="2025-08-24T17:17:48 IST" name="getAllBookWithInvalidTokenTest" description="Get all books with invalid token" finished-at="2025-08-24T17:17:48 IST" depends-on-methods="com.restapi.test.BookTest.addBooksTest" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllBookWithInvalidTokenTest -->
+        <test-method signature="getBookWithNonExistantIdTest()[pri:0, instance:com.restapi.test.NegativeBookTest@6933b6c6]" started-at="2025-08-24T17:17:48 IST" name="getBookWithNonExistantIdTest" description="Get book with non-existent ID" finished-at="2025-08-24T17:17:48 IST" depends-on-methods="com.restapi.test.BookTest.addBooksTest" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookWithNonExistantIdTest -->
+        <test-method signature="getBookWithInvalidIdTest()[pri:2, instance:com.restapi.test.NegativeBookTest@6933b6c6]" started-at="2025-08-24T17:17:48 IST" name="getBookWithInvalidIdTest" description="Get book with invalid ID" finished-at="2025-08-24T17:17:48 IST" depends-on-methods="com.restapi.test.BookTest.addBooksTest" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookWithInvalidIdTest -->
+      </class> <!-- com.restapi.test.NegativeBookTest -->
+      <class name="com.restapi.test.BookTest">
+        <test-method is-config="true" signature="setupData()[pri:0, instance:com.restapi.test.BookTest@7bbc8656]" started-at="2025-08-24T17:17:48 IST" name="setupData" finished-at="2025-08-24T17:17:48 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupData -->
+        <test-method signature="addBooksTest()[pri:1, instance:com.restapi.test.BookTest@7bbc8656]" started-at="2025-08-24T17:17:48 IST" name="addBooksTest" description="Add a new book" finished-at="2025-08-24T17:17:48 IST" depends-on-methods="com.restapi.test.AccountsTest.signUpUser, com.restapi.test.AccountsTest.verifySignUpUserAndGenerateToken" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBooksTest -->
+        <test-method signature="getBookByIdTest()[pri:2, instance:com.restapi.test.BookTest@7bbc8656]" started-at="2025-08-24T17:17:48 IST" name="getBookByIdTest" description="Get book by ID" finished-at="2025-08-24T17:17:48 IST" depends-on-methods="com.restapi.test.BookTest.addBooksTest" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookByIdTest -->
+        <test-method signature="updateBookByIdTest()[pri:3, instance:com.restapi.test.BookTest@7bbc8656]" started-at="2025-08-24T17:17:48 IST" name="updateBookByIdTest" description="Update book by ID" finished-at="2025-08-24T17:17:48 IST" depends-on-methods="com.restapi.test.BookTest.addBooksTest" duration-ms="75" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateBookByIdTest -->
+        <test-method signature="getAllBooks()[pri:4, instance:com.restapi.test.BookTest@7bbc8656]" started-at="2025-08-24T17:17:48 IST" name="getAllBooks" description="Get all books" finished-at="2025-08-24T17:17:48 IST" depends-on-methods="com.restapi.test.BookTest.addBooksTest" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllBooks -->
+        <test-method signature="deleteBookByIdTest()[pri:5, instance:com.restapi.test.BookTest@7bbc8656]" started-at="2025-08-24T17:17:49 IST" name="deleteBookByIdTest" description="Delete book by ID" finished-at="2025-08-24T17:17:49 IST" depends-on-methods="com.restapi.test.BookTest.addBooksTest" duration-ms="49" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBookByIdTest -->
+      </class> <!-- com.restapi.test.BookTest -->
+    </test> <!-- API Tests -->
+  </suite> <!-- APIsuite -->
+</testng-results>
