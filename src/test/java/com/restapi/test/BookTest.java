@@ -29,7 +29,7 @@ public class BookTest extends Base {
 	                .then().log().all() // Log the response details
 	                .statusCode(200).extract().response();
 	        bookId = response.jsonPath().getInt("id");
-	        Assert.assertNotNull(bookId, "Book ID should not be null");
+	        Assert.assertNotNull(bookId, "Book ID should not be null Value");
 
 	    }
 
