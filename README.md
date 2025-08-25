@@ -47,6 +47,9 @@ Sign-up/login with invalid credentials
 Request Chaining
 The access token obtained from the login API is dynamically applied to subsequent requests—such as create, update, and delete book operations—facilitating smooth request chaining.
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/03fa3419-0215-4924-a784-e124e783af45" />
+
+
 Test Strategy
 API Test Case Architecture
 Designed modular test classes for each core resource: User, Book, and Health
@@ -56,8 +59,7 @@ Leveraged dependsOnGroups to handle inter-class dependencies (e.g., Book tests r
 Implemented request chaining to support token-based authentication flows
 
 Utilized a centralized data.json file for input data, promoting cleaner and more maintainable test code
-2
-.Scalability
+2.Scalability
 Configurable base URL and tokens using config.properties
 Clear separation of concerns: logic, request specs, data, reporting
 Assertions for status codes, response structure, and error messages
