@@ -25,7 +25,7 @@ public class HealthTest extends Base {
 	                .response();
 
 	        String status = response.jsonPath().getString("status");
-	        Assert.assertEquals(status, "up", "Health check status mismatch");
+	        Assert.assertEquals(status, "up", "Health check status mismatched");
 	    }
 
 }
