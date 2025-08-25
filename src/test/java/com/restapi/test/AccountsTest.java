@@ -65,7 +65,7 @@ public class AccountsTest extends Base {
 	                .response();
 
 	        String message = response.jsonPath().getString("detail");
-	        Assert.assertEquals(message, "Email already registered", "Sign-up message mismatch for existing email");
+	        Assert.assertEquals(message, "Email already registered", "Sign-up message mismatch for existing email ID");
 	    }
 
 	    @Test(priority = 4, dependsOnMethods = "signUpUser", description = "Login with incorrect password")
