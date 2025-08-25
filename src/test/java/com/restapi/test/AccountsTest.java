@@ -48,7 +48,7 @@ public class AccountsTest extends Base {
 	                .extract()
 	                .response();
 	        token = response.jsonPath().getString("access_token");
-	        Assert.assertNotNull(token, "Token should not be null");
+	        Assert.assertNotNull(token, "Token should not be null value");
 	    }
 
 	    @Test(priority = 3, dependsOnMethods = "signUpUser", description = "Sign up with existing email")
