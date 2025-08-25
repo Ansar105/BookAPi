@@ -46,7 +46,7 @@ public class BookTest extends Base {
 	                .statusCode(200)
 	                .extract().response();
 	        Assert.assertEquals(response.jsonPath().getString("name"),book.getName(),
-	                "Book name should match");
+	                "Book name should be match");
 
 	    }
 
@@ -66,7 +66,7 @@ public class BookTest extends Base {
 	        JsonPath expectedJson = new JsonPath(updatePayload);
 	        JsonPath actualJson = new JsonPath(response.asString());
 	        Assert.assertEquals(actualJson.getString("name"), expectedJson.getString("name"),
-	                "Book name should match after update");
+	                "Book name should match after updated");
 
 	    }
 
