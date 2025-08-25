@@ -104,7 +104,7 @@ public class AccountsTest extends Base {
 	                .statusCode(400)
 	                .extract().response();
 	        String message = response.jsonPath().getString("detail");
-	        Assert.assertEquals(message, "Incorrect email or password", "Login message mismatch for incorrect password");
+	        Assert.assertEquals(message, "Incorrect email or password", "Login message mismatch for incorrect Email ID");
 
 	    }
 
