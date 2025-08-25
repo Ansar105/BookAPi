@@ -22,7 +22,7 @@ public class NegativeBookTest extends Base {
 				.body(jsonPayload).when().post(Routes.ADD_NEW_BOOK).then().log().all() // Log the response details
 				.statusCode(403).extract().response();
 		String message = response.jsonPath().getString("detail");
-		Assert.assertEquals(message, "Invalid token or expired token", "Error message mismatch");
+		Assert.assertEquals(message, "Invalid token or expired token", "Invalid Token Mismatch");
 	}
 
 	@Test(dependsOnMethods = { "com.restapi.test.AccountsTest.signUpUser",
