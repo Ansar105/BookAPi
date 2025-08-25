@@ -32,7 +32,7 @@ public class AccountsTest extends Base {
 	                .response();
 
 	        String message = response.jsonPath().getString("message");
-	        Assert.assertEquals(message, "User created successfully", "Sign-up message mismatch");
+	        Assert.assertEquals(message, "User created successfully", "Sign-up message");
 	    }
 
 	    @Test(priority = 2, dependsOnMethods = "signUpUser", description = "Verify user sign up and generate token")
