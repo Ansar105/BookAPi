@@ -35,7 +35,7 @@ public class NegativeBookTest extends Base {
 				.all() // Log the response details
 				.statusCode(403).extract().response();
 		String message = response.jsonPath().getString("detail");
-		Assert.assertEquals(message, "Invalid token or expired token", "Error message mismatch");
+		Assert.assertEquals(message, "Invalid token or expired token", "Invalid token mismatch with updated book");
 	}
 
 	@Test(dependsOnMethods = { "com.restapi.test.AccountsTest.signUpUser",
