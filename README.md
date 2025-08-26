@@ -26,7 +26,8 @@ Request Chaining
 •	The access token from login is automatically reused in subsequent requests (create, update, delete).
 •	Ensures realistic authentication flows.
 
-
+Screenshot of test execution Report
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/f283a3ac-ad73-4ad3-88a0-1f7e56b138db" />
 
 Test Strategy
 
